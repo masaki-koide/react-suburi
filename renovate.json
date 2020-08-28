@@ -1,0 +1,7 @@
+{
+  "extends": [
+    "github>masaki-koide/renovate-config",
+    ":timezone(Asia/Tokyo)",
+    "schedule:weekly"
+  ]
+}

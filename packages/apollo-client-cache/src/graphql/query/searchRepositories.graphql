@@ -1,0 +1,21 @@
+query SearchRepositories($after: String) {
+  search(type: REPOSITORY, query: "react", first: 10, after: $after) {
+    edges {
+      cursor
+      node {
+        ... on Repository {
+          id
+          url
+          nameWithOwner
+          stargazers {
+            totalCount
+          }
+        }
+      }
+    }
+    pageInfo {
+      endCursor
+      hasNextPage
+    }
+  }
+}
